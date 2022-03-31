@@ -1,0 +1,17 @@
+@media screen and (max-width: 768px) {
+  .reactplayer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .react-playerSmall-device {
+    display: none;
+  }
+}
+
+.device-react-player {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
