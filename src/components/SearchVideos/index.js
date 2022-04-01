@@ -4,7 +4,6 @@ import Loader from 'react-loader-spinner'
 
 import {BsSearch} from 'react-icons/bs'
 import VideoCard from '../VideoCard'
-import ThemeContext from '../context/ThemeContext'
 
 import {
   SearchAndVideoListContainer,
@@ -163,30 +162,24 @@ class SearchVideos extends Component {
     </NotFoundContainer>
   )
 
-  renderHomeVideos = () => (
-    <ThemeContext.Consumer>
-      {value => {
-        const {isDarkTheme} = value
-
-        const {VideoList} = this.state
-        const isSearchFound = VideoList.length === 0
-        return (
-          <SearchAndVideoListContainer>
-            {this.renderSearchView()}
-            {isSearchFound ? (
-              this.renderNotFound()
-            ) : (
-              <ListItemContainer>
-                {VideoList.map(eachItem => (
-                  <VideoCard key={eachItem.id} videoDetails={eachItem} />
-                ))}
-              </ListItemContainer>
-            )}
-          </SearchAndVideoListContainer>
-        )
-      }}
-    </ThemeContext.Consumer>
-  )
+  renderHomeVideos = () => {
+    const {VideoList} = this.state
+    const isSearchFound = VideoList.length === 0
+    return (
+      <SearchAndVideoListContainer>
+        {this.renderSearchView()}
+        {isSearchFound ? (
+          this.renderNotFound()
+        ) : (
+          <ListItemContainer>
+            {VideoList.map(eachItem => (
+              <VideoCard key={eachItem.id} videoDetails={eachItem} />
+            ))}
+          </ListItemContainer>
+        )}
+      </SearchAndVideoListContainer>
+    )
+  }
 
   renderAllVideos = () => {
     const {apiStatus} = this.state

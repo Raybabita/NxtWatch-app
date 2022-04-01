@@ -7,12 +7,13 @@ export const SearchAndVideoListContainer = styled.div`
   width: 100%;
   min-height: 100vh;
   background-color: ${props => props.bgColorClass};
+  margin-top: 10px;
 `
 export const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 40%;
+  width: 50%;
   min-width: 200px;
   margin-top: 10px;
   border-radius: 6px;
@@ -26,7 +27,7 @@ export const SearchContainer = styled.div`
 
 export const InputEl = styled.input`
   height: 30px;
-  width: 90%;
+  width: 100%;
   border-radius: 6px;
   border: 1px solid #d7dfe9;
   outline: none;

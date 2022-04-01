@@ -34,8 +34,9 @@ export const HomeBannerContainer = styled.div`
   background-size: cover;
   height: 40vh;
   padding-left: 20px;
+  padding-top: 10px;
   padding-right: 20px;
-  padding-top: 20px;
+
   @media screen and (max-width: 768px) {
     width: 95%;
     height: 20vh;

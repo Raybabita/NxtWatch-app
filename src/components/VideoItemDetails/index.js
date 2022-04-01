@@ -143,12 +143,7 @@ class VideoItemDetails extends Component {
   renderSpecificVideoView = () => (
     <ThemeContext.Consumer>
       {value => {
-        const {
-          isDarkTheme,
-          addToSavedVideoList,
-          removeSavedVideo,
-          isMobileView,
-        } = value
+        const {isDarkTheme, addToSavedVideoList, removeSavedVideo} = value
 
         const {
           videoItemDetailsList,

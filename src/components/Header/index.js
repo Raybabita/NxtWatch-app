@@ -35,12 +35,7 @@ const Header = props => {
   return (
     <ThemeContext.Consumer>
       {value => {
-        const {
-          isDarkTheme,
-          toggleTheme,
-          toggleMenuOnMobileView,
-          isMobileView,
-        } = value
+        const {isDarkTheme, toggleTheme, toggleMenuOnMobileView} = value
 
         const onClickToggle = () => {
           toggleTheme()
@@ -124,8 +119,6 @@ const Header = props => {
         const onClickMobileMenuToggle = () => {
           toggleMenuOnMobileView()
         }
-
-        const istext = isMobileView ? 'jello' : 'how ar'
 
         const renderMobileView = () => (
           <MobileViewContainer bgColor={bgColorClassName}>

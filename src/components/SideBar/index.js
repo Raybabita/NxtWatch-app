@@ -25,8 +25,6 @@ const SideBar = () => (
 
       const hoverBgColor = isDarkTheme ? '#424242' : '#f1f5f9'
 
-      const bgColor = isDarkTheme ? '#ffffff' : '#000000'
-
       const textColor = isDarkTheme ? '#f9f9f9' : '#181818'
 
       const bgColorClassName = isDarkTheme ? '#212121' : '#f9f9f9'
